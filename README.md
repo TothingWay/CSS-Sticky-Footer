@@ -1,4 +1,4 @@
-#CSS-Sticky-Footer
+# CSS-Sticky-Footer
 
 
 ## Intro
