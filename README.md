@@ -1,7 +1,7 @@
 #CSS-Sticky-Footer
 
 
-##Intro
+## Intro
 
 在网页设计中，存在一个相当古老但又相当常见的问题：有一个具有块级样式的页脚,当页面内容足够长时它一切正常,如图所示（ 图片来源：[ituring.com](http://www.ituring.com.cn/figures/2016/CSS/16.d07z.023.png) ）：  
 
@@ -9,7 +9,7 @@
 
 而当页面较短时就会出现问题,如图所示（ 图片来源：[ituring.com](http://www.ituring.com.cn/figures/2016/CSS/16.d07z.024.png) ）：  
 
-![](http://www.ituring.com.cn/figures/2016/CSS/16.d07z.024.png)
+![](http://www.ituring.com.cn/figures/2016/CSS/16.d07z.024.png)  
 此时的问题在于，页脚不能像我们期望中那样“紧贴”在视口的最底部，而是紧跟在内容的下方。  **CSS Sticky Footer**可以帮我们解决这个问题。
 
 
@@ -18,7 +18,7 @@
 - Responsive
 - Without JavaScript
 
-##Usage
+## Usage
 
 1. 由[Ryan Faits](http://ryanfait.com/resources/footer-stick-to-bottom-of-page/)创造的footer布局  
 	*缺点：HTML代码中会有一个空的div层。严格来说，是不符合语义网代码标准。*
