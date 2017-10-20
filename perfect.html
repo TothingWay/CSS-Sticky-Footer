@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>perfect sticky footer</title>
+</head>
+<style>
+  * {
+    margin: 0;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  .page-wrap {
+    min-height: 100%;
+  }
+
+  .content {
+    /* equal to footer height */
+    padding-bottom: 100px;
+  }
+
+  .footer {
+    position: relative;
+
+    height: 100px;
+    /* equal to footer height */
+    margin-top: -100px;
+
+    text-align: center;
+
+    color: #fff;
+    background: #333;
+
+    line-height: 100px;
+  }
+</style>
+
+<body>
+  <div class="page-wrap">
+    <div class="centent">
+      Content!
+    </div>
+  </div>
+  <div class="footer">
+    I'm the Sticky Footer.
+  </div>
+</body>
+
+</html>
