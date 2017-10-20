@@ -27,38 +27,38 @@
 	
 	```html
 	<div class="page-wrap">
-		Content!
-		<div class="push"></div>
+	  Content!
+	  <div class="push"></div>
 	</div>
 	<div class="footer">
-		I'm the Sticky Footer.
+	  I'm the Sticky Footer.
 	</div>
 	```
 	CSS代码:
 	
 	```css
 	* {
-		margin: 0;
+	  margin: 0;
 	}
 	html,
 	body {
-		height: 100%;
+	  height: 100%;
 	}
 	.page-wrap {
-		min-height: 100%;
-		/* equal to footer height */
-		margin-bottom: -100px;
+	  min-height: 100%;
+	  /* equal to footer height */
+	  margin-bottom: -100px;
 	}
 	.push {
-		/* equal to footer height */
-		height: 100px;
+	  /* equal to footer height */
+	  height: 100px;
 	}
 	.footer {
-		height: 100px;
-		text-align: center;
-		color: #fff;
-		background: #333;
-		line-height: 100px;
+	  height: 100px;
+	  text-align: center;
+	  color: #fff;
+	  background: #333;
+	  line-height: 100px;
 	}
 	```
 2. 利用after伪元素替换上述方法中的空div  
@@ -68,40 +68,40 @@
 	
 	```html
 	<div class="page-wrap">
-		Content!
+	  Content!
 	</div>
 	<div class="footer">
-		I'm the Sticky Footer.
+	  I'm the Sticky Footer.
 	</div>
 	```
 	CSS代码:
 	
 	```css
 	* {
-		margin: 0;
+	  margin: 0;
 	}
 	html,
 	body {
-		height: 100%;
+	  height: 100%;
 	}
 	.page-wrap {
-		min-height: 100%;
-		/* equal to footer height */
-		margin-bottom: -100px;
+	  min-height: 100%;
+	  /* equal to footer height */
+	  margin-bottom: -100px;
 	}
 	.page-wrap:after {
-		display: block;
-		content: "";
+	  display: block;
+	  content: "";
 	}
 	.footer,
-		.page-wrap:after {
-		height: 100px;
+	  .page-wrap:after {
+	  height: 100px;
 	}
 	.footer {
-		text-align: center;
-		color: #fff;
-		background: #333;
-		line-height: 100px;
+	  text-align: center;
+	  color: #fff;
+	  background: #333;
+	  line-height: 100px;
 	}
 	```
 3. 目前较为完美的css2.1解决方案
@@ -110,40 +110,40 @@
 	
 	```html
 	<div class="page-wrap">
-		<div class="centent">
-			Content!
-		</div>
+	  <div class="centent">
+	    Content!
+	  </div>
 	</div>
 	<div class="footer">
-		I'm the Sticky Footer.
+	  I'm the Sticky Footer.
 	</div>
 	```
 	CSS代码:
 	
 	```css
 	* {
-		margin: 0;
+	  margin: 0;
 	}
 	html,
 	body {
-		height: 100%;
+	  height: 100%;
 	}
 	.page-wrap {
-		min-height: 100%;
+	  min-height: 100%;
 	}
 	.content {
-		/* equal to footer height */
-		padding-bottom: 100px;
+	  /* equal to footer height */
+	  padding-bottom: 100px;
 	}
 	.footer {
-		position: relative;
-		height: 100px;
-		/* equal to footer height */
-		margin-top: -100px;
-		text-align: center;
-		color: #fff;
-		background: #333;
-		line-height: 100px;
+	  position: relative;
+	  height: 100px;
+	  /* equal to footer height */
+	  margin-top: -100px;
+	  text-align: center;
+	  color: #fff;
+	  background: #333;
+	  line-height: 100px;
 	}
 	```
 4. 通过CSS3的vh（ viewpoint height ）来计算整体视窗的高度（ 1vh等于视窗高度的1% ），然后减去底部footer的高度，从而求得内容区域的最小高度。
@@ -153,10 +153,10 @@
 	
 	```html
 	<div class="page-wrap">
-		Content!
+	  Content!
 	</div>
 	<div class="footer">
-		I'm the Sticky Footer.
+	  I'm the Sticky Footer.
 	</div>
 	```
 	
@@ -164,17 +164,17 @@
 	
 	```css
 	* {
-		margin: 0;
-		padding: 0;
+	  margin: 0;
+	  padding: 0;
 	}
 	.page-wrap {
-		min-height: calc(100vh - 100px);
+	  min-height: calc(100vh - 100px);
 	}
 	.footer {
-		background: #333;
-		color: #fff;
-		line-height: 100px;
-		text-align: center;
+	  background: #333;
+	  color: #fff;
+	  line-height: 100px;
+	  text-align: center;
 	}
 	```
 5. flex布局（ footer的高度不需要固定 ）  
@@ -184,30 +184,30 @@
 	
 	```html
 	<div class="page-wrap">
-		Content!
+	  Content!
 	</div>
 	<div class="footer">
-		I'm the Sticky Footer.
+	  I'm the Sticky Footer.
 	</div>
 	```
 	CSS代码:
 	
 	```css
 	* {
-		margin: 0;
+	  margin: 0;
 	}
 	body {
-		display: flex;
-		flex-flow: column;
-		min-height: 100vh;
+	  display: flex;
+	  flex-flow: column;
+	  min-height: 100vh;
 	}
 	.page-wrap {
-		flex: 1;
+	  flex: 1;
 	}
 	.footer {
-		background: #333;
-		color: #fff;
-		line-height: 100px;
-		text-align: center;
+	  background: #333;
+	  color: #fff;
+	  line-height: 100px;
+	  text-align: center;
 	}
 	```
